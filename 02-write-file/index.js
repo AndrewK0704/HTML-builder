@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const process = require('process');
 
-let way=path.join(__dirname, 'text.txt');
-let writeStream=fs.createWriteStream(way);
+let writeStream=fs.createWriteStream(path.join(__dirname, 'text.txt'));
 
 process.stdout.write('Have a nice day! Please, enter the text...\n');
 
