@@ -1,9 +1,7 @@
 const path = require('path');
-const fs = require('fs')
+const fs = require('fs');
 
-let way=path.join(__dirname, 'secret-folder');
-
-fs.readdir(way, {withFileTypes: true}, (error, data)=>{
+fs.readdir(path.join(__dirname, 'secret-folder'), {withFileTypes: true}, (error, data)=>{
     for (const file of data) {
         if(file.isFile()) {
                 let way2=path.join(__dirname,'secret-folder',file.name);
